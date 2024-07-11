@@ -1,0 +1,91 @@
+.keyboard {
+  margin: 0 auto;
+  padding: 6px;
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  user-select: none;
+  background-color: #dddddd;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.keyboard__row {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: Space-between;
+}
+
+.keyboard__key {
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+  transition: all .3s;
+  background-color: #91aac0;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  &.Tab {
+    width: 50px;
+    background-color: #c6daeb;
+  }
+
+  &.Delete {
+    width: 44px;
+    background-color: #c6daeb;
+  }
+
+  &.Backspace {
+    width: 100px;
+    background-color: #c6daeb;
+  }
+
+  &.CapsLock {
+    @extend .Backspace;
+  }
+
+  &.Enter {
+    width: 86px;
+    background-color: #c6daeb;
+  }
+
+  &.ShiftLeft {
+    @extend .CapsLock;
+  }
+
+  &.ShiftRight {
+    @extend .Enter;
+  }
+
+  &.Space {
+    width: 330px;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: #d67b7b;
+  }
+
+  &:active {
+    background-color: rgb(199, 82, 82);
+    border-radius: 18px;
+  }
+
+  &.active {
+    background-color: rgb(199, 82, 82);
+    border-radius: 18px;
+  }
+}
+
+span {
+  pointer-events: none;
+}
+
+.hidden {
+  display: none;
+}
